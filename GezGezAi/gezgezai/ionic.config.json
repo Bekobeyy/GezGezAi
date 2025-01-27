@@ -1,0 +1,7 @@
+{
+  "name": "gezgezai",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
