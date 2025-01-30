@@ -1,24 +1,22 @@
-/* IonPage üzerine tam ekran arka plan */
-.login-page {
+/* Arka plan */
+.signup-page {
   background: url("../assets/1svg.jpg") no-repeat center center;
-  background-size: cover; /* Görsel sayfayı tamamen kaplasın */
+  background-size: cover;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-
-
 /* Şeffaf ve Blur Efektli Toolbar */
 .custom-toolbar {
-  background: rgba(0, 0, 0, 0.3); /* Hafif bulanıklık efekti */
-  border-bottom: 2px solid rgb(49, 93, 94); /* Hafif şeffaf kenar çizgisi */
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgb(49, 93, 94);
   z-index: 10;
 }
 
-/* IonContent'ın varsayılan arka planını temizle */
-ion-content,ion-toolbar,ion-item,ion-button {
-  --background: transparent; /* Ionic'in varsayılan arka planını kaldır */
+/* Ionic bileşenleri için varsayılan arka planı kaldır */
+ion-content, ion-toolbar, ion-item, ion-button {
+  --background: transparent;
 }
 
 
@@ -43,8 +41,6 @@ ion-content,ion-toolbar,ion-item,ion-button {
     text-decoration: none;
   }
 
-
-
 /* Logo */
 .logo {
   height: 80px;
@@ -52,12 +48,12 @@ ion-content,ion-toolbar,ion-item,ion-button {
   width: auto;
 }
 
-/* Giriş Kutusu */
-.login-container {
-  background: rgba(255, 255, 255, 0.3); /* Şeffaf kutu arka planı */
+/* Kayıt Formu */
+.signup-container {
+  background: rgba(255, 255, 255, 0.3);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin-top: 10%;
   margin-bottom: auto;
   max-width: 600px;
@@ -67,51 +63,46 @@ ion-content,ion-toolbar,ion-item,ion-button {
   margin-right: 10%;
 }
 
-.login-title {
-  /* font-size: 3rem; 
-  color: rgb(49, 93, 94);*/
+.signup-title {
   text-align: center;
   margin-bottom: 20px;
 }
 
 /* Input ve Buton */
-.login-input {
+.signup-input {
   margin-bottom: 15px;
   color: rgb(49, 93, 94);
   border-radius: 10px;
   font-size: large;
 }
 
-
-.login-button {
+.signup-button {
   font-size: large;
   margin-top: 10px;
   border-radius: 4px;
   color: white;
   background-color: rgb(49, 93, 94);
   transition: 0.2s;
-  
 }
 
-.login-button:hover {
+.signup-button:hover {
   color: rgb(0, 0, 0);
   background-color: rgba(0, 0, 0, 0);
   transition: 0.2s;
-  /* border-radius: 10px; */
 }
 
-.signup-text {
+.login-text {
   text-align: center;
   margin-top: 15px;
   font-size: large;
 }
 
-.signup-text a {
+.login-text a {
   color: rgb(49, 93, 94);
   transition: 0.2s;
 }
 
-.signup-text a:hover {
+.login-text a:hover {
   color: rgb(0, 0, 0);
   transition: 0.2s;
 }

@@ -10,40 +10,44 @@ import {
   IonLabel,
   IonItem,
 } from "@ionic/react";
-import "./Login.css";
+import "./Signup.css";
 import { Link } from "react-router-dom";
 
-const Login: React.FC = () => {
+const Signup: React.FC = () => {
   return (
-    <IonPage className="login-page">
+    <IonPage className="signup-page">
       <IonHeader>
         <IonToolbar className="custom-toolbar">
-          <Link to="/" className="logo-link">
-            <IonTitle>
-              <img src="../assets/logo_seffaf.png" alt="GezGezAi Logo" className="logo" />
-            </IonTitle>
-          </Link>
+            <Link to="/" className="logo-link">
+                <IonTitle>
+                    <img src="../assets/logo_seffaf.png" alt="GezGezAi Logo" className="logo" />
+                </IonTitle>
+            </Link>
         </IonToolbar>
       </IonHeader>
 
       <IonContent fullscreen>
-        <div className="login-container">
-        <h1 className="login-title">
+        <div className="signup-container">
+          <h1 className="signup-title">
             <img src="../assets/logo_seffaf_yazi.png" alt="GezGezAi Logo" className="logo" />
           </h1>
-          <IonItem className="login-input">
+          <IonItem className="signup-input">
+            <IonLabel position="floating">Ad Soyad</IonLabel>
+            <IonInput type="text" required />
+          </IonItem>
+          <IonItem className="signup-input">
             <IonLabel position="floating">E-posta</IonLabel>
             <IonInput type="email" required />
           </IonItem>
-          <IonItem className="login-input">
+          <IonItem className="signup-input">
             <IonLabel position="floating">Şifre</IonLabel>
             <IonInput type="password" required />
           </IonItem>
-          <IonButton expand="block" className="login-button">
-            GİRİŞ YAP
+          <IonButton expand="block" className="signup-button">
+            KAYIT OL
           </IonButton>
           <p className="signup-text">
-            Hesabınız yok mu? <Link to="/signup">Kayıt Olun</Link>
+            Zaten bir hesabınız var mı? <Link to="/login">Giriş Yapın</Link>
           </p>
         </div>
       </IonContent>
@@ -51,4 +55,4 @@ const Login: React.FC = () => {
   );
 };
 
-export default Login;
+export default Signup;
