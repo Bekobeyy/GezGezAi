@@ -18,11 +18,12 @@ const Signup: React.FC = () => {
     <IonPage className="signup-page">
       <IonHeader>
         <IonToolbar className="custom-toolbar">
-            <Link to="/" className="logo-link">
-                <IonTitle>
-                    <img src="../assets/logo_seffaf.png" alt="GezGezAi Logo" className="logo" />
-                </IonTitle>
-            </Link>
+            <div className="toolbar-container">
+              <Link to="/" className="logo-link">
+                <img src="../assets/logo_seffaf.png" alt="GezGezAi Logo" className="logo" />
+              </Link>
+              <Link to="/" className="link-text">Ana Sayfa</Link>
+            </div>
         </IonToolbar>
       </IonHeader>
 
@@ -32,15 +33,15 @@ const Signup: React.FC = () => {
             <img src="../assets/logo_seffaf_yazi.png" alt="GezGezAi Logo" className="logo" />
           </h1>
           <IonItem className="signup-input">
-            <IonLabel position="floating">Ad Soyad</IonLabel>
+            <IonLabel position="fixed">Ad Soyad</IonLabel>
             <IonInput type="text" required />
           </IonItem>
           <IonItem className="signup-input">
-            <IonLabel position="floating">E-posta</IonLabel>
+            <IonLabel position="fixed">E-posta</IonLabel>
             <IonInput type="email" required />
           </IonItem>
           <IonItem className="signup-input">
-            <IonLabel position="floating">Şifre</IonLabel>
+            <IonLabel position="fixed">Şifre</IonLabel>
             <IonInput type="password" required />
           </IonItem>
           <IonButton expand="block" className="signup-button">

@@ -17,7 +17,7 @@ const Home: React.FC = () => {
             <Link to="/" className="logo-link">
               <img src="../assets/logo_seffaf.png" alt="GezGezAi Logo" className="logo" />
             </Link>
-            <Link to="/login" className="login-text">Giriş Yap</Link>
+            <Link to="/login" className="link-text">Giriş Yap</Link>
           </div>
         </IonToolbar>
       </IonHeader>

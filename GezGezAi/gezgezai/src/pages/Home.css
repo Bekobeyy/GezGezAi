@@ -32,16 +32,16 @@
     width: auto;
   }
   
-  .login-text {
+  .link-text {
     margin-bottom: 1%;
-    font-size: 1rem;
+    font-size: 1.3rem !important;
     color: white;
     text-decoration: none;
     margin-right: 2%;
     transition: 0.2s;
   }
   
-  .login-text:hover {
+  .link-text:hover {
     color: rgb(0, 0, 0);
   }
   
