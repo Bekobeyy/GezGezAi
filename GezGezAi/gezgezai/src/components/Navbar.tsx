@@ -12,10 +12,10 @@ const Navbar: React.FC = () => {
 
   return (
     <IonToolbar>
-      <IonTitle>GezGezAi</IonTitle>
+      <IonTitle></IonTitle>
       {localStorage.getItem("token") && (
         <IonButton onClick={handleLogout} slot="end" color="danger">
-          Çıkış Yap
+          {/* Çıkış Yap */}
         </IonButton>
       )}
     </IonToolbar>

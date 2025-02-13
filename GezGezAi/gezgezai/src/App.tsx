@@ -32,7 +32,7 @@ import '@ionic/react/css/palettes/dark.system.css';
 
 /* Theme variables */
 import './theme/variables.css';
-import PrivateRoute from "./components/PrivateRoute";
+// import PrivateRoute from "./components/PrivateRoute";
 
 
 setupIonicReact();
@@ -41,17 +41,19 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Signup from "./pages/Signup";
 import Profile from './pages/Profile';
-import Navbar from "./components/Navbar";
+import GeziPlani from './pages/GeziPlani';
+// import Navbar from "./components/Navbar";
 
 const App: React.FC = () => (
 <IonApp>
   <IonReactRouter>
-    <Navbar />
+    {/* <Navbar /> */}
     <IonRouterOutlet>
       <Route exact path="/" component={Home} />
       <Route exact path="/login" component={Login} />
       <Route exact path="/signup" component={Signup} />
-      <PrivateRoute exact path="/profile" component={Profile} />
+      <Route exact path="/geziplani" component={GeziPlani} />
+      <Route exact path="/profile" component={Profile} />
     </IonRouterOutlet>
   </IonReactRouter>
 </IonApp>

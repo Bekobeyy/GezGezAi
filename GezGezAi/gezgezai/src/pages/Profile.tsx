@@ -1,53 +1,88 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import {
   IonContent,
   IonHeader,
   IonPage,
-  IonTitle,
   IonToolbar,
   IonButton,
+  IonInput,
 } from "@ionic/react";
+import { Link } from "react-router-dom";
 import "./Profile.css";
-import { fetchWithAuth } from "../utils/api";
 
-const Profile: React.FC = () => {
-  const [user, setUser] = useState<any>(null);
-  const [error, setError] = useState("");
+const Profil: React.FC = () => {
+  const [name, setName] = useState("Ahmet Yılmaz");
+  const [email, setEmail] = useState("ahmet@example.com");
+  const [profilePic, setProfilePic] = useState<string | null>(null);
 
-  useEffect(() => {
-    const getUserProfile = async () => {
-      try {
-        const data = await fetchWithAuth("/user/profile");
-        setUser(data);
-      } catch (err: any) {
-        setError(err.message);
-      }
-    };
+  // Profil fotoğrafı yükleme fonksiyonu
+  const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
+    if (event.target.files && event.target.files[0]) {
+      const fileReader = new FileReader();
+      fileReader.onload = () => {
+        setProfilePic(fileReader.result as string);
+      };
+      fileReader.readAsDataURL(event.target.files[0]);
+    }
+  };
 
-    getUserProfile();
-  }, []);
+  // Şifre değiştirme fonksiyonu (şimdilik sadece alert veriyor)
+  const changePassword = () => {
+    alert("Şifre değiştirme işlemi burada yapılacak.");
+  };
+
+  // Çıkış yap fonksiyonu
+  const logout = () => {
+    alert("Çıkış yapıldı.");
+  };
 
   return (
-    <IonPage>
+    <IonPage className="profile-page">
       <IonHeader>
-        <IonToolbar>
-          <IonTitle>Profil</IonTitle>
+        <IonToolbar className="custom-toolbar">
+          <div className="toolbar-container">
+            <Link to="/" className="logo-link">
+              <img src="../assets/logo_seffaf.png" alt="GezGezAi Logo" className="logo" />
+            </Link>
+            <Link to="/geziplani" className="link-text">Gezi Planı</Link>
+          </div>
         </IonToolbar>
       </IonHeader>
+
       <IonContent fullscreen>
-        {error && <p>{error}</p>}
-        {user ? (
-          <div>
-            <h2>{user.name}</h2>
-            <p>{user.email}</p>
-            <p>Kredi: {user.credits}</p>
+        <div className="profile-container">
+          <h1 className="profile-title">Profil Bilgileri</h1>
+
+          {/* Profil Fotoğrafı */}
+          <div className="profile-pic-container">
+            <img
+              src={profilePic || "../assets/default_profile.png"}
+              alt="Profil"
+              className="profile-pic"
+            />
+            <input type="file" accept="image/*" onChange={handleImageUpload} />
           </div>
-        ) : (
-          <p>Yükleniyor...</p>
-        )}
+
+          {/* Kullanıcı Bilgileri */}
+          <div className="profile-info">
+            <label>Ad Soyad:</label>
+            <IonInput value={name} onIonChange={(e) => setName(e.detail.value!)} />
+
+            <label>E-Posta:</label>
+            <IonInput value={email} readonly />
+          </div>
+
+          {/* Şifre Değiştir ve Çıkış Yap Butonları */}
+          <IonButton className="profile-button" expand="block" onClick={changePassword}>
+            Şifre Değiştir
+          </IonButton>
+          <IonButton className="logout-button" expand="block" onClick={logout}>
+            Çıkış Yap
+          </IonButton>
+        </div>
       </IonContent>
     </IonPage>
   );
 };
 
-export default Profile;
+export default Profil;

@@ -8,7 +8,10 @@ import {
 import { Link } from "react-router-dom";
 import "./Home.css";
 
+const isAuthenticated = !!localStorage.getItem("token");
+
 const Home: React.FC = () => {
+  
   return (
     <IonPage className="home-page">
       <IonHeader>
@@ -17,7 +20,15 @@ const Home: React.FC = () => {
             <Link to="/" className="logo-link">
               <img src="../assets/logo_seffaf.png" alt="GezGezAi Logo" className="logo" />
             </Link>
-            <Link to="/login" className="link-text">Giriş Yap</Link>
+            {isAuthenticated ? (
+              <>
+                <Link to="/geziplani" className="link-text">Gezi Planı</Link>
+                <Link to="/profile" className="link-text">Profilim</Link>
+                <button className="link-text" onClick={() => { localStorage.removeItem("token"); window.location.reload(); }}>Çıkış Yap</button>
+              </>
+            ) : (
+              <Link to="/login" className="link-text">Giriş Yap</Link>
+            )}
           </div>
         </IonToolbar>
       </IonHeader>

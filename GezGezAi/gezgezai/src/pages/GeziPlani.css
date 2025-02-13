@@ -1,0 +1,87 @@
+.gezi-page {
+  background: url("../assets/1svg.jpg") no-repeat center center;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Şeffaf Navbar */
+.custom-toolbar {
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 2px solid rgb(49, 93, 94);
+  z-index: 10;
+}
+
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 10px 15px;
+}
+
+.logo {
+  height: 80px;
+  width: auto;
+}
+
+.link-text {
+  font-size: 1.3rem;
+  color: white;
+  text-decoration: none;
+  margin-right: 2%;
+  transition: 0.2s;
+}
+
+.link-text:hover {
+  color: rgb(0, 0, 0);
+}
+
+/* Sayfa İçeriği */
+.gezi-container {
+  background: rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: auto;
+  max-width: 750px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+/* Form başlığı */
+.gezi-title {
+  font-size: 2.2rem;
+  color: rgb(49, 93, 94);
+  margin-bottom: 20px;
+}
+
+/* Tarih seçme alanları */
+.date-picker-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.date-picker-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(49, 93, 94);
+  margin-bottom: 5px;
+}
+
+.date-picker-container input {
+  padding: 10px;
+  border: 2px solid rgb(49, 93, 94);
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s;
+}
+
+.date-picker-container input:focus {
+  border-color: rgb(34, 70, 71);
+  box-shadow: 0 0 8px rgba(49, 93, 94, 0.5);
+}

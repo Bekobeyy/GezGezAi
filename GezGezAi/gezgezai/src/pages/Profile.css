@@ -1,0 +1,83 @@
+.profile-page {
+    background: url("../assets/1svg.jpg") no-repeat center center;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Ana içeriği ortala */
+  .profile-container {
+    background: rgba(255, 255, 255, 0.3);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-top: 10%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .profile-title {
+    font-size: 2rem;
+    color: rgb(49, 93, 94);
+    margin-bottom: 20px;
+  }
+  
+  /* Profil fotoğrafı */
+  .profile-pic-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgb(49, 93, 94);
+    margin-bottom: 10px;
+  }
+  
+  .profile-pic-container input {
+    font-size: 0.9rem;
+  }
+  
+  /* Kullanıcı Bilgileri */
+  .profile-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile-info label {
+    font-size: 1.2rem;
+    color: rgb(49, 93, 94);
+    margin-top: 10px;
+  }
+  
+  .profile-info input {
+    width: 80%;
+    padding: 8px;
+    font-size: 1rem;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Butonlar */
+  .profile-button {
+    background-color: rgb(49, 93, 94);
+    color: white;
+    margin-top: 15px;
+  }
+  
+  .logout-button {
+    background-color: rgb(200, 50, 50);
+    color: white;
+    margin-top: 10px;
+  }
+  

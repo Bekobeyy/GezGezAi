@@ -41,7 +41,7 @@ const Login: React.FC = () => {
       localStorage.setItem("token", data.token);
       setToastMessage("Giriş başarılı!");
       setShowToast(true);
-      setTimeout(() => history.push("/home"), 1000); // Anasayfaya yönlendir
+      setTimeout(() => history.push("/geziplani"), 1000); // Anasayfaya yönlendir
     } catch (error: any) {
       setToastMessage(error.message);
       setShowToast(true);
@@ -66,15 +66,27 @@ const Login: React.FC = () => {
         <h1 className="login-title">
             <img src="../assets/logo_seffaf_yazi.png" alt="GezGezAi Logo" className="logo" />
           </h1>
-          <IonItem className="login-input">
-            <IonLabel position="fixed">E-posta</IonLabel>
-            <IonInput type="email" required />
-          </IonItem>
-          <IonItem className="login-input">
-            <IonLabel position="fixed">Şifre</IonLabel>
-            <IonInput type="password" required />
-          </IonItem>
-          <IonButton expand="block" className="login-button">
+            <IonItem className="login-input">
+              <IonLabel position="fixed">E-posta</IonLabel>
+              <IonInput
+                type="email"
+                required
+                value={email}
+                onIonChange={(e) => setEmail(e.detail.value!)}
+              />
+            </IonItem>
+
+            <IonItem className="login-input">
+              <IonLabel position="fixed">Şifre</IonLabel>
+              <IonInput
+                type="password"
+                required
+                value={password}
+                onIonChange={(e) => setPassword(e.detail.value!)}
+              />
+            </IonItem>
+
+          <IonButton expand="block" className="login-button" onClick={handleLogin}>
             GİRİŞ YAP
           </IonButton>
           <p className="signup-text">
