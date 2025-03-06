@@ -85,3 +85,115 @@
   border-color: rgb(34, 70, 71);
   box-shadow: 0 0 8px rgba(49, 93, 94, 0.5);
 }
+
+.dropdown-list {
+  border: 1px solid #ccc;
+  max-height: 300px;
+  overflow-y: auto;
+  background: black;
+  border-radius: 5px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  display: none;
+}
+
+.dropdown-list.show {
+  display: block;
+}
+
+.select-container {
+  position: relative;
+  width: 80%;
+  margin: auto;
+}
+
+.select-container input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.dropdown-list div {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdown-list div:hover {
+  background: rgb(49, 93, 94);
+  color: white;
+}
+
+.selected-country {
+  font-size: 1.2rem;
+  font-weight: bold;
+  /* color: rgb(49, 93, 94); */
+  /* text-align: center; */
+  /* margin-bottom: 10px; */
+  /* background: rgba(49, 93, 94, 0.2); */
+  /* padding: 5px 10px; */
+  /* border-radius: 10px; */
+  display: inline-block;
+
+  background: linear-gradient(to right, rgb(49, 93, 94), rgb(34, 70, 71)); /* Geçişli renk */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px; /* Daha oval bir görünüm */
+  /* align-items: center; */
+  /* gap: 10px; */
+  /* font-size: 1rem; */
+  /* font-weight: bold; */
+  /* transition: all 0.2s ease-in-out; */
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Seçili şehirlerin bulunduğu alan */
+.selected-cities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+/* Seçilen şehirleri gösteren "badge" tasarımı */
+.city-badge {
+  background: linear-gradient(to right, rgb(49, 93, 94), rgb(34, 70, 71)); /* Geçişli renk */
+  color: white;
+  padding: 10px 15px;
+  border-radius: 25px; /* Daha oval bir görünüm */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Şehir etiketi üzerine gelindiğinde renk değişimi */
+.city-badge:hover {
+  background: rgb(0, 191, 98);
+  cursor: pointer;
+}
+
+/* Şehir etiketinin içindeki "sil" butonu */
+.city-badge button {
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.city-badge button:hover {
+  color: red;
+  transform: scale(1.2);
+}
+
+
+
