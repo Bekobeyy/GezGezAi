@@ -79,6 +79,8 @@
   font-size: 1rem;
   outline: none;
   transition: 0.3s;
+  background-color: rgba(0, 0, 0, 0.3);
+  cursor: pointer;
 }
 
 .date-picker-container input:focus {
@@ -96,6 +98,8 @@
   width: 100%;
   z-index: 10;
   display: none;
+  margin-top: -20px;
+  /* background-color: rgba(0, 0, 0, 0.7); */
 }
 
 .dropdown-list.show {
@@ -110,20 +114,34 @@
 
 .select-container input {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 20px;
+  border: 2px solid rgb(49, 93, 94);
   border-radius: 5px;
   font-size: 1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.select-container label {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: rgb(49, 93, 94);
+}
+
+.select-container ::placeholder{
+  color: white;
 }
 
 .dropdown-list div {
   padding: 10px;
   cursor: pointer;
+  background-color: rgb(34, 70, 71);
 }
 
 .dropdown-list div:hover {
-  background: rgb(49, 93, 94);
   color: white;
+  background-color: black;
 }
 
 .selected-country {
@@ -147,6 +165,10 @@
   /* font-weight: bold; */
   /* transition: all 0.2s ease-in-out; */
   box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.selected-country:hover {
+  background: rgb(0, 191, 98);
 }
 
 /* Seçili şehirlerin bulunduğu alan */
@@ -177,7 +199,6 @@
 /* Şehir etiketi üzerine gelindiğinde renk değişimi */
 .city-badge:hover {
   background: rgb(0, 191, 98);
-  cursor: pointer;
 }
 
 /* Şehir etiketinin içindeki "sil" butonu */
@@ -192,7 +213,7 @@
 
 .city-badge button:hover {
   color: red;
-  transform: scale(1.2);
+  transform: scale(1.5);
 }
 
 

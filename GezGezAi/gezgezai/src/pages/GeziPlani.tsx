@@ -105,7 +105,7 @@ const GeziPlani: React.FC = () => {
 
            {/* Ülke Seçimi */}
            <div className="select-container">
-            <label>Ülke Seç:</label>
+            <label>Ülke Seç: </label>
             {selectedCountry && <p className="selected-country">{selectedCountry.name}</p>}
             <input
               type="text"
@@ -129,7 +129,7 @@ const GeziPlani: React.FC = () => {
           {/* Şehir Seçimi */}
           {selectedCountry && (
             <div className="select-container">
-              <label>Şehir Seç:</label>
+              <label>Şehir Seç: </label>
               <input
                 type="text"
                 placeholder="Şehir Ara..."
